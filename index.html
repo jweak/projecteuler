@@ -1,46 +1,47 @@
-<html>
+<!DOCTYPE html>
   <head>
-  <script type="text/javascript" src="problem1.js"></script>
-  <script type="text/javascript" src="problem2.js"></script>
-  <script type="text/javascript" src="problem3.js"></script>
-  <script type="text/javascript" src="problem4.js"></script>
-  <script type="text/javascript" src="problem5.js"></script>
-  <script type="text/javascript" src="problem6.js"></script>
+    <title>Project Euler problems and solutions</title>
+    <script type="text/javascript" src="problem1.js"></script>
+    <script type="text/javascript" src="problem2.js"></script>
+    <script type="text/javascript" src="problem3.js"></script>
+    <script type="text/javascript" src="problem4.js"></script>
+    <script type="text/javascript" src="problem5.js"></script>
+    <script type="text/javascript" src="problem6.js"></script>
 
-  <script type="text/javascript">
-    function run(fun, elId) {
-      var start = new Date().getTime();
-      var result = fun.call();
-      var el = document.getElementById(elId);
-      el.innerHTML = "<span class='result'>" + result + "</span> in " + (new Date().getTime() - start) + "ms";
-    }
-  </script>
-  <style type="text/css">
-    body {
-      font-family: Georgia, "Times New Roman", Times, serif;
-    }
-    h2 {
-      font-family: Helvetica, Arial, sans-serif;
-    }
-    h1 {
-      margin-left: 1em;
-    }
-    main {
-      width: 50em;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .result {
-      color:red;
-      font-weight: bold;
-    }
-    section {
-      background: #eee;
-      padding: 2em;
-      margin: 1em;
-    }
-  </style>
+    <script type="text/javascript">
+      function run(fun, elId) {
+        var start = new Date().getTime();
+        var result = fun.call();
+        var el = document.getElementById(elId);
+        el.innerHTML = "<span class='result'>" + result + "</span> in " + (new Date().getTime() - start) + "ms";
+      }
+    </script>
+    <style type="text/css">
+      body {
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+      h2 {
+        font-family: Helvetica, Arial, sans-serif;
+      }
+      h1 {
+        margin-left: 1em;
+      }
+      main {
+        width: 50em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .result {
+        color:red;
+        font-weight: bold;
+      }
+      section {
+        background: #eee;
+        padding: 2em;
+        margin: 1em;
+      }
+    </style>
   </head>
   <body>
     <main>
@@ -48,10 +49,9 @@
 
     <section>
       <h2><a href="http://projecteuler.net/problem=1">Problem 1</a>: Multiples of 3 and 5</h2>
-        If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+        <p>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.</p>
 
-        Find the sum of all the multiples of 3 or 5 below 1000.
-      </p>
+        <p>Find the sum of all the multiples of 3 or 5 below 1000.</p>
       <button onclick="run(problem1,'problem1Result')">run solution</button>
       <p id="problem1Result"></p>
     </section>
@@ -98,8 +98,5 @@
       <p id="problem6Result"></p>
     </section>
     </main>
-
-
-
   </body> 
 </html>
