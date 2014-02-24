@@ -56,9 +56,11 @@
       }
       
       section {
-        background: #fff;
-        padding: 2em;
-        margin: 1em;
+        padding: 1em 3em 0 3em;
+      }
+
+      footer {
+        padding: 1em 3em 3em 3em;
       }
 
       button::-moz-focus-inner,
@@ -127,13 +129,21 @@
           max-width: 100%;
           width: 100%;
         }
+        
         section pre {
           font-size: 12px;
         }
+        
         section {
           margin: 0.5em;
           padding: 1em;
         }
+        
+        footer {
+          margin-left: 1.5em;
+          margin-bottom: 1.5em;
+        }
+
         h1 {
           margin-left: 1em;
           font-size: 120%;
@@ -141,6 +151,7 @@
         h2 {
           font-size: 110%;
         }
+
       }
 
     </style>
@@ -297,6 +308,11 @@ Find the product <em>abc</em>.</p>
       <button onclick="run(problem11,'problem11Result')">run solution</button>
       <p id="problem11Result"></p>
     </section> 
+
+    <footer>
+      <p>Code by <a href="https://github.com/jweak">Juho Heikka</a></p>
+      <p><a href="https://github.com/jweak/projecteuler">Github repository for the code.</a></p>
+    </footer>
 
     </main>
   </body> 
