@@ -15,10 +15,12 @@
 
     <script type="text/javascript">
       function run(fun, elId) {
+        var el = document.getElementById(elId);
+
         var start = new Date().getTime();
         var result = fun.call();
-        var el = document.getElementById(elId);
-        el.innerHTML = "<span class='result'>" + result + "</span>. Time spent " + (new Date().getTime() - start) + " ms.";
+        var deltaTime = new Date().getTime() - start;
+        el.innerHTML = "<span class='result'>" + result + "</span>. Time spent " + deltaTime + " milliseconds.";
       }
     </script>
     <link rel="stylesheet" href="style/style.css"></link>
@@ -38,7 +40,7 @@
 
         <p>Find the sum of all the multiples of 3 or 5 below 1000.</p>
       <a class="button" onclick="run(problem1,'problem1Result')">run solution</a>
-      <p id="problem1Result"></p>
+      <p class="resultContainer" id="problem1Result"></p>
     </section>
 
     <section class="padding">
@@ -49,7 +51,7 @@
 
         <p>By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.</p>
       <a class="button" onclick="run(problem2,'problem2Result')">run solution</a>
-      <p id="problem2Result"></p>
+      <p class="resultContainer" id="problem2Result"></p>
     </section>
 
     <section class="padding">
@@ -58,7 +60,7 @@
 
         <p>What is the largest prime factor of the number 600851475143 ?</p>
       <a class="button" onclick="run(problem3,'problem3Result')">run solution</a>
-      <p id="problem3Result"></p>
+      <p class="resultContainer" id="problem3Result"></p>
     </section>
 
     <section class="padding">
@@ -67,7 +69,7 @@
 
       <p>Find the largest palindrome made from the product of two 3-digit numbers.</p>
       <a class="button" onclick="run(problem4,'problem4Result')">run solution</a>
-      <p id="problem4Result"></p>
+      <p class="resultContainer" id="problem4Result"></p>
     </section>
 
     <section class="padding">
@@ -76,7 +78,7 @@
 
 <p>What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?</p>
       <a class="button" onclick="run(problem5,'problem5Result')">run solution</a>
-      <p id="problem5Result"></p>
+      <p class="resultContainer" id="problem5Result"></p>
     </section>
 
     <section class="padding">
@@ -85,7 +87,7 @@
 
       <p>Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.</p>
       <a class="button" onclick="run(problem6,'problem6Result')">run solution</a>
-      <p id="problem6Result"></p>
+      <p class="resultContainer" id="problem6Result"></p>
     </section>
 
     <section class="padding">
@@ -94,7 +96,7 @@
 
       <p>What is the 10 001st prime number?</p>
       <a class="button" onclick="run(problem7,'problem7Result')">run solution</a>
-      <p id="problem7Result"></p>
+      <p class="resultContainer" id="problem7Result"></p>
     </section>
 
     <section class="padding">
@@ -124,7 +126,7 @@
 71636269561882670428252483600823257530420752963450
 </pre>
       <a class="button" onclick="run(problem8,'problem8Result')">run solution</a>
-      <p id="problem8Result"></p>
+      <p class="resultContainer" id="problem8Result"></p>
     </section>  
 
     <section class="padding">
@@ -136,7 +138,7 @@
 Find the product <em>abc</em>.</p>
 
       <a class="button" onclick="run(problem9,'problem9Result')">run solution</a>
-      <p id="problem9Result"></p>
+      <p class="resultContainer" id="problem9Result"></p>
     </section> 
 
     <section class="padding">
@@ -146,7 +148,7 @@ Find the product <em>abc</em>.</p>
       <p>Find the sum of all the primes below two million.</p>
 
       <a class="button" onclick="run(problem10,'problem10Result')">run solution</a>
-      <p id="problem10Result"></p>
+      <p class="resultContainer" id="problem10Result"></p>
     </section> 
 
     <section class="padding">
@@ -178,7 +180,7 @@ Find the product <em>abc</em>.</p>
       <p>The product of these numbers is 26 &times; 63 &times; 78 &times; 14 = 1788696.</p>
       <p>What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20&times;20 grid?</p>
       <a class="button" onclick="run(problem11,'problem11Result')">run solution</a>
-      <p id="problem11Result"></p>
+      <p class="resultContainer" id="problem11Result"></p>
     </section> 
 
     <footer>
