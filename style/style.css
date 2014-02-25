@@ -34,6 +34,7 @@ main {
 
 .resultContainer {
   min-height: 2em;
+  margin-bottom: 0;
 }
 
 .result {
@@ -57,7 +58,22 @@ main {
 
 .left-margin {
   margin-left: 3em;
+}
+
+.minus-margin-top {
   margin-top: -1em;
+}
+
+.source-link {
+  margin-left: 4em;
+}
+
+a {
+  color: #000;
+}
+
+a:visited {
+  color: #999;
 }
 
 section {
