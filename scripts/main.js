@@ -1,0 +1,11 @@
+window.problem1 = require('./problem1');
+window.problem2 = require('./problem2');
+window.problem3 = require('./problem3');
+window.problem4 = require('./problem4');
+window.problem5 = require('./problem5');
+window.problem6 = require('./problem6');
+window.problem7 = require('./problem7');
+window.problem8 = require('./problem8');
+window.problem9 = require('./problem9');
+window.problem10 = require('./problem10');
+window.problem11 = require('./problem11');
