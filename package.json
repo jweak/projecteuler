@@ -1,0 +1,8 @@
+{
+  "name": "project-euler",
+  "description": "Project euler solutions in JavaScript",
+  "version": "0.1.0",
+  "devDependencies": {
+    "gulp": "~3.5.2"
+  }
+}
