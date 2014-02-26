@@ -5,6 +5,8 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     livereload = require('gulp-livereload'),
     lr = require('tiny-lr'),
+    browserify = require('gulp-browserify'),
+    clean = require('gulp-clean'),
     server = lr();
 
   gulp.task('styles', function() {
@@ -14,8 +16,11 @@ var gulp = require('gulp'),
   });
 
   gulp.task('scripts', function() {
-    return gulp.src('scripts/*.js')
-      .pipe(concat('main.js'))
+    gulp.src(['scripts/bundle.js'], {read: false})
+      .pipe(clean());
+    return gulp.src('scripts/main.js')
+      .pipe(browserify())
+      .pipe(concat('bundle.js'))
       .pipe(gulp.dest('scripts/'))
       .pipe(livereload(server))
       .pipe(notify({message: "Scripts task complete"}));

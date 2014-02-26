@@ -3,6 +3,14 @@
   "description": "Project euler solutions in JavaScript",
   "version": "0.1.0",
   "devDependencies": {
-    "gulp": "~3.5.2"
+    "gulp": "~3.5.2",
+    "gulp-livereload": "~1.2.0",
+    "gulp-concat": "~2.1.7",
+    "tiny-lr": "0.0.5",
+    "gulp-jshint": "~1.5.0",
+    "gulp-imagemin": "~0.1.5",
+    "gulp-notify": "~1.0.0-beta",
+    "gulp-browserify": "~0.4.6",
+    "gulp-clean": "~0.2.4"
   }
 }

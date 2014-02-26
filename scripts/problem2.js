@@ -1,4 +1,4 @@
-function problem2() {
+module.exports = function() {
   var fib1 = 1;
   var fib2 = 2;
   var sumOfEvenNumbers = 2;
@@ -13,3 +13,4 @@ function problem2() {
 
   return sumOfEvenNumbers;
 }
+

@@ -12,13 +12,13 @@ function findGreatestConsecutiveProduct(number, consecutiveDigits) {
     }
     
     if (product > largestProduct) {
-      largestProduct = product;
+      largestProduct = product; 
     }
   }
   return largestProduct;
 }
 
-function problem8() {
+module.exports = function() {
   var number = 
       "73167176531330624919225119674426574742355349194934" +
       "96983520312774506326239578318016984801869478851843" +

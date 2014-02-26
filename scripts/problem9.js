@@ -13,7 +13,7 @@ function findPythagoreanTriplets(max) {
   return triplets;
 }
 
-function problem9() {
+module.exports = function() {
   var triplets = findPythagoreanTriplets(1000);
   var tripletsSumOfThousand = triplets.filter(function(triplet) {
     return triplet[0] + triplet[1] + triplet[2] === 1000;

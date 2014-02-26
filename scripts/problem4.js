@@ -21,7 +21,7 @@ function isPalindrome(number) {
 function findLargestPalindrome(min, max) {
   var i = min;
   var largestPalindrome = 0;
-  var num, x; 
+  var num, x;
   while(i < max) {
     for (x = min; x < max; x++)  {
       num = x * i;
@@ -35,6 +35,6 @@ function findLargestPalindrome(min, max) {
   return largestPalindrome;
 }
 
-function problem4() {
+module.exports = function() {
   return findLargestPalindrome(100, 1000);
 }

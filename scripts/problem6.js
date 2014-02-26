@@ -14,7 +14,7 @@ function sumFun(min, max) {
   return sum;
 } 
 
-function problem6() {
+module.exports = function() {
   var sum = sumFun(1, 100);
   var sumSquares = sumOfSquares(1, 100);
 
