@@ -18,7 +18,7 @@ function largestPrimeFactor(number) {
   return largestPrime;
 }
 
-function problem3() {
+module.exports = function() {
   "use strict";
   return largestPrimeFactor(600851475143);
 }
