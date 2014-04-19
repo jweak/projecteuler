@@ -62,7 +62,8 @@ window.problem8 = require('./problem8');
 window.problem9 = require('./problem9');
 window.problem10 = require('./problem10');
 window.problem11 = require('./problem11');
-},{"./problem1":3,"./problem10":4,"./problem11":5,"./problem2":6,"./problem3":7,"./problem4":8,"./problem5":9,"./problem6":10,"./problem7":11,"./problem8":12,"./problem9":13}],3:[function(require,module,exports){
+window.problem12 = require('./problem12');
+},{"./problem1":3,"./problem10":4,"./problem11":5,"./problem12":6,"./problem2":7,"./problem3":8,"./problem4":9,"./problem5":10,"./problem6":11,"./problem7":12,"./problem8":13,"./problem9":14}],3:[function(require,module,exports){
 module.exports = function() {
   var sum = 0;
   for (var i = 0; i < 1000; i++) {
@@ -191,6 +192,8 @@ module.exports = function() {
 }
 
 },{}],6:[function(require,module,exports){
+
+},{}],7:[function(require,module,exports){
 module.exports = function() {
   var fib1 = 1;
   var fib2 = 2;
@@ -208,7 +211,7 @@ module.exports = function() {
 }
 
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 var atkinSieve = require('./atkinSieve');
 
 function largestPrimeFactor(number) {
@@ -229,13 +232,13 @@ function largestPrimeFactor(number) {
   return largestPrime;
 }
 
-function problem3() {
+module.exports = function() {
   "use strict";
   return largestPrimeFactor(600851475143);
 }
 
 
-},{"./atkinSieve":1}],8:[function(require,module,exports){
+},{"./atkinSieve":1}],9:[function(require,module,exports){
 function isPalindrome(number) {
   if (number < 10 && number >= 0) {
     return true;
@@ -277,7 +280,7 @@ module.exports = function() {
   return findLargestPalindrome(100, 1000);
 }
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 module.exports = function() {
   for (var i = 20; i < 1000000000; i += 20) {
     for (var x = 3; x < 20; x++) {
@@ -290,7 +293,7 @@ module.exports = function() {
   }
 }
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 function sumOfSquares(min, max) {
   var sum = 0;
   for (var i = min; i <= max; i++) {
@@ -313,7 +316,7 @@ module.exports = function() {
 
   return sum * sum - sumSquares;
 }
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 var atkinSieve = require('./atkinSieve');
 
 function problem7() {
@@ -322,7 +325,7 @@ function problem7() {
   return primes[10000];
 }
 
-},{"./atkinSieve":1}],12:[function(require,module,exports){
+},{"./atkinSieve":1}],13:[function(require,module,exports){
 function findGreatestConsecutiveProduct(number, consecutiveDigits) {
   var numberStr = number + "";
   if (numberStr.length < consecutiveDigits) {
@@ -367,7 +370,7 @@ module.exports = function() {
       "71636269561882670428252483600823257530420752963450";
   return findGreatestConsecutiveProduct(number, 5);
 }
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 function findPythagoreanTriplets(max) {
   var triplets = [];
   for (var i = 1; i < max; i++) {
