@@ -192,8 +192,47 @@ module.exports = function() {
 }
 
 },{}],6:[function(require,module,exports){
+var atkinSieve = require('./atkinSieve');
 
-},{}],7:[function(require,module,exports){
+function findDivisibleCount(divisibleAmount) {
+  "use strict";
+  var primes = atkinSieve(50000);
+  var factors, i;
+  for (i = divisibleAmount; i < 50000; i++) {
+    factors = factorization(i, primes);
+    if (factors.length === divisibleAmount) {
+      return i;
+    }
+  }
+  return -1; 
+};
+
+function factorization(n, primes) {
+  "use strict";
+  var i, count, factors = [], len = primes.length;
+  for (i = 0; i < primes.length; i++) {
+    var p = primes[i];
+    if (p * p > n) {
+      break;
+    }
+    while (n % p === 0) {
+      factors.push(p);
+      n /= p;
+    }
+  }
+  if (n > 1) {
+    factors.push(n);
+  }
+  return factors;
+};
+
+window.findDivisibleCount = findDivisibleCount;
+
+module.exports = function() {
+  console.log(findDivisibleCount(3));
+  return 0;
+};
+},{"./atkinSieve":1}],7:[function(require,module,exports){
 module.exports = function() {
   var fib1 = 1;
   var fib2 = 2;
@@ -319,7 +358,7 @@ module.exports = function() {
 },{}],12:[function(require,module,exports){
 var atkinSieve = require('./atkinSieve');
 
-function problem7() {
+module.exports = function() {
   "use strict";
   var primes = atkinSieve(110000);
   return primes[10000];
